@@ -16,80 +16,117 @@
       href="https://devchallenges.io/"
     />
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet"> 
 
-    <title>Devchallenges</title>
+    <title>My Team Page</title>
 
     <style>
-      body {
-        font-family: "Poppins", sans-serif;
-      }
+     body {
+       box-sizing: border-box;
+     }
 
-      ul {
-        padding-left: 24px;
-      }
+     .photo-grid {
+       /*display: grid;
+       grid-template-columns: repeat(2, 1fr);*/
+      
+     }
+     .person {
+      width: 250px;
+      position: relative;
+      display: inline-block;
+     }
 
-      li {
-        margin-bottom: 8px;
-      }
+     .person:nth-child(2), 
+     .person:nth-child(4),
+     .person:nth-child(6)
+     {
+       position: relative;
+        top: 100px;
+     }
 
-      .welcome {
-        max-width: 800px;
-        margin: 0 auto;
-      }
-
-      .welcome-text {
-        margin-top: 30vh;
-        font-weight: 500;
-      }
-
-      .welcome-text p {
+     .picture {
+      max-width: 75%;
+      height: auto;
+      display: inline-block;
+     }
+     .name {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
         font-size: 1rem;
-        font-weight: 400;
-      }
+     }
+     .role {
+       font-family: 'PT Serif', serif;
+       font-weight: 400;
+       transform: rotate(90deg);
+       margin: 0;
+       position: absolute;
+       text-transform: uppercase;
+       font-size: 0.7rem;
+     }
 
-      .welcome-text h1 {
-        font-size: 1.5rem;
-      }
-
-      .welcome-text a {
-        color: #f7542e;
-      }
+     .product {
+      right: 0px;
+      top: 40px;
+     }
+     .art {
+      right: 10px;
+      top: 32px;
+     }
+     .tech, .dev {
+      right: 20px;
+      top: 25px;
+     }
+     .ux {
+      right: 12px;
+      top: 30px;
+     }
+    
     </style>
   </head>
   <body>
-    <div class="welcome">
-      <div class="welcome-text">
-        <h1>
-          Welcome to
-          <a href="https://devchallenges.io/" target="_blank"
-            >devchallenges.io</a
-          >
-        </h1>
-
-        <p>
-          If you have any questions, don't hesitate to ask on Discord. Here are
-          7 general steps to complete the challenge:
-        </p>
+    <header>
+      <div class="header__container">
+        <h1>The creative crew</h1>
+        <div class="header__text">
+          <h2>Who We Are</h2>
+          <p>We are team of creatively diverse.  driven.  innovative individuals working in various locations from the world.</p>
+        </div>
       </div>
-
-      <ul>
-        <li><b>Step 1:</b> Create a new repository on github</li>
-        <li><b>Step 2:</b> Copy resources, README.md to your repository</li>
-        <li>
-          <b>Step 3:</b> Login to Figma to checkout font, color, spacing,..
-        </li>
-        <li><b>Step 4:</b> Complete all user stories</li>
-        <li><b>Step 5:</b> Update README.md</li>
-        <li><b>Step 6:</b> Deploy your app and submit your solution</li>
-        <li>
-          <b>Step 7:</b> Share your solution on Discord, Twitter and other
-          platforms to ask for feedback
-        </li>
-      </ul>
-    </div>
+    </header>
+    <main>
+      <section class="photo-grid">
+        <div class="person">
+          <img class="picture" src="photo1.png" alt="Bill Mahoney">
+          <h3 class="role product">Product owner</h3>
+          <h2 class="name">Bill Mahoney</h2>
+        </div>
+        <div class="person">
+          <img class="picture" src="photo2.png" alt="Bill Mahoney">
+          <h3 class="role art">Art director</h3>
+          <h2 class="name">Saba Cabrera</h2>
+        </div>
+        <div class="person">
+          <img class="picture" src="photo3.png" alt="Bill Mahoney">
+          <h3 class="role tech">Tech Lead</h3>
+          <h2 class="name">Shae Le</h2>
+        </div>
+        <div class="person">
+          <img class="picture" src="photo4.png" alt="Bill Mahoney">
+          <h3 class="role ux">Ux designer</h3>
+          <h2 class="name">Skylah Lu</h2>
+        </div>
+        <div class="person">
+          <img class="picture" src="photo5.png" alt="Bill Mahoney">
+          <h3 class="role dev">Developer</h3>
+          <h2 class="name">Griff Richards</h2>
+        </div>
+        <div class="person">
+          <img class="picture" src="photo6.png" alt="Bill Mahoney">
+          <h3 class="role dev">Developer</h3>
+          <h2 class="name">Stan John</h2>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
