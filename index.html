@@ -17,71 +17,179 @@
     />
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=PT+Serif:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
     <title>My Team Page</title>
 
     <style>
-     body {
-       box-sizing: border-box;
-     }
-
-     .photo-grid {
-       /*display: grid;
-       grid-template-columns: repeat(2, 1fr);*/
-      
-     }
-     .person {
-      width: 250px;
-      position: relative;
-      display: inline-block;
-     }
-
-     .person:nth-child(2), 
-     .person:nth-child(4),
-     .person:nth-child(6)
-     {
-       position: relative;
-        top: 100px;
-     }
-
-     .picture {
-      max-width: 75%;
-      height: auto;
-      display: inline-block;
-     }
-     .name {
+      body main {
+        box-sizing: border-box;
+        width: 100%;
+        margin: 0;
+      }
+      header h1 {
+        font-family: 'PT serif', sans-serif;
+        font-size: 1.5rem;
+        margin: 3rem 85px 38px 12px;
+      }
+      .header__text {
+        margin-left: 12px;
+        margin-right: 30px;
+        margin-bottom: 50px;
+      }
+      .header__text h2 {
         font-family: 'Poppins', sans-serif;
-        font-weight: 600;
+        text-transform: uppercase;
         font-size: 1rem;
-     }
-     .role {
-       font-family: 'PT Serif', serif;
-       font-weight: 400;
-       transform: rotate(90deg);
-       margin: 0;
-       position: absolute;
-       text-transform: uppercase;
-       font-size: 0.7rem;
-     }
+        margin-bottom: 3px;
+        line-height: 27px;
+      }
 
-     .product {
-      right: 0px;
-      top: 40px;
-     }
-     .art {
-      right: 10px;
-      top: 32px;
-     }
-     .tech, .dev {
-      right: 20px;
-      top: 25px;
-     }
-     .ux {
-      right: 12px;
-      top: 30px;
-     }
-    
+      .header__text p {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        font-size: 0.8rem;
+      }
+
+      .photo-grid {
+        width: 350px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .person {
+        width: 150px;
+        position: relative;
+        display: inline-block;
+        margin-bottom: 3rem;
+      }
+
+      .person:nth-child(2),
+      .person:nth-child(4),
+      .person:nth-child(6) {
+        top: 70px;
+      }
+
+      .picture {
+        max-width: 75%;
+        height: auto;
+        display: inline-block;
+      }
+      .name {
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        font-size: 0.7rem;
+      }
+
+      .role__container {
+        transform: rotate(90deg);
+        width: 130px;
+        position: absolute;
+        left: 55px;
+        top: 60px;
+      }
+      .role {
+        font-family: "PT Serif", serif;
+        font-weight: 400;
+        margin: 0;
+        text-transform: uppercase;
+        font-size: 0.5rem;
+      }
+      footer {
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 0.7rem;
+        color:#A9A9A9;
+        margin-top: 130px;
+      }
+      @media screen and (min-width: 550px) {
+       .header__container{
+         display: flex;
+         flex-direction: row;
+         margin: 50px auto;
+       }
+       .header__text {
+         width: 40%;
+       }
+        .photo-grid {
+          width: 470px;
+        }
+
+        .person {
+          margin-bottom: 1.5rem;
+        }
+      
+      .person:nth-child(2),
+      .person:nth-child(4),
+      .person:nth-child(6) {
+        top: 1.5rem;
+      }
+      .person:nth-child(5){
+        top: 3rem;
+      }
+      }
+
+      @media screen and (min-width: 800px){
+        .header__container{
+          margin-bottom: 4rem;
+          margin: 90px auto 120px auto;
+          width: 800px;
+        }
+        header h1 {
+          font-size: 2rem;
+          margin: 0;
+          position: absolute;
+        }
+
+        .header__text {
+          width: 50%;
+          margin-left: 500px;
+          
+        }
+
+        .header__text h2 {
+          font-size: 1.1rem;
+        }
+        .header__text p{
+          font-size: 0.9rem;
+          width: 70%;
+        }
+        
+        .photo-grid{
+          width: 800px;
+          margin-bottom: 3rem;
+        }
+
+        .person {
+          width: 250px;
+        }
+
+        .name {
+          font-size: 1.1rem;
+        }
+
+        .role__container{
+          top: 55px;
+          left: 135px;
+        }
+
+        .role {
+          font-size: 0.9rem;
+        }
+
+      .person:nth-child(2),
+      .person:nth-child(4),
+      .person:nth-child(6) {
+        top: 100px;
+      }
+
+        .person:nth-child(5){
+          top: 170px;
+        }
+
+        footer {
+          margin-top: 200px;
+        }
+      }
     </style>
   </head>
   <body>
@@ -90,43 +198,59 @@
         <h1>The creative crew</h1>
         <div class="header__text">
           <h2>Who We Are</h2>
-          <p>We are team of creatively diverse.  driven.  innovative individuals working in various locations from the world.</p>
+          <p>
+            We are team of creatively diverse. driven. innovative individuals
+            working in various locations from the world.
+          </p>
         </div>
       </div>
     </header>
     <main>
       <section class="photo-grid">
         <div class="person">
-          <img class="picture" src="photo1.png" alt="Bill Mahoney">
-          <h3 class="role product">Product owner</h3>
+          <img class="picture" src="photo1.png" alt="Bill Mahoney" />
+          <div class="role__container">
+            <h3 class="role">Product owner</h3>
+          </div>
           <h2 class="name">Bill Mahoney</h2>
         </div>
         <div class="person">
-          <img class="picture" src="photo2.png" alt="Bill Mahoney">
-          <h3 class="role art">Art director</h3>
+          <img class="picture" src="photo2.png" alt="Saba Cabrera" />
+          <div class="role__container">
+            <h3 class="role">Art director</h3>
+          </div>
           <h2 class="name">Saba Cabrera</h2>
         </div>
         <div class="person">
-          <img class="picture" src="photo3.png" alt="Bill Mahoney">
-          <h3 class="role tech">Tech Lead</h3>
+          <img class="picture" src="photo3.png" alt="Shae Le" />
+          <div class="role__container">
+            <h3 class="role">Tech Lead</h3>
+          </div>
           <h2 class="name">Shae Le</h2>
         </div>
         <div class="person">
-          <img class="picture" src="photo4.png" alt="Bill Mahoney">
-          <h3 class="role ux">Ux designer</h3>
+          <img class="picture" src="photo4.png" alt="Skylah Lu" />
+          <div class="role__container">
+            <h3 class="role">Ux designer</h3>
+          </div>
           <h2 class="name">Skylah Lu</h2>
         </div>
         <div class="person">
-          <img class="picture" src="photo5.png" alt="Bill Mahoney">
-          <h3 class="role dev">Developer</h3>
+          <img class="picture" src="photo5.png" alt="Griff Richardsy" />
+          <div class="role__container">
+            <h3 class="role">Developer</h3>
+          </div>
           <h2 class="name">Griff Richards</h2>
         </div>
         <div class="person">
-          <img class="picture" src="photo6.png" alt="Bill Mahoney">
-          <h3 class="role dev">Developer</h3>
+          <img class="picture" src="photo6.png" alt="Stan John" />
+          <div class="role__container">
+            <h3 class="role">Developer</h3>
+          </div>
           <h2 class="name">Stan John</h2>
         </div>
       </section>
     </main>
+    <footer>created by <em>maria</em> - devChallenges.io</footer>
   </body>
 </html>
